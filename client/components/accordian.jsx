@@ -12,7 +12,7 @@ const Accordian = (props) => {
 
   return (
     <div className={'accordian-section'}>
-      <button classname={`accordian`}>
+      <button classname={`accordian`} >
         <p className='accordian_title'>{props.title}</p>
       </button>
       <div className='accordian_content'>

@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
-//const db = require('./index.js);
+const db = require('./index.js');
+//mongoose.Promise = global.Promise;
 
 const shoeSchema = new mongoose.Schema({
-  modelId: Number, //maybe string???
+  modelId: Number,
   name: String,
   coreFeatures: String,
   description: String
@@ -19,4 +20,5 @@ const highlightsSchema = new mongoose.Schema({
 const ShoeData = mongoose.model('Shoe', shoeSchema);
 const HighlightData = mongoose.model('Highlight', highlightsSchema);
 
-module.exports.shoe
+module.exports.shoe = ShoeData;
+module.exports.highlight = HighlightData;
