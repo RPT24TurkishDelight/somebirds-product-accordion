@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const db = require('./index.js');
-//mongoose.Promise = global.Promise;
 
 const shoeSchema = new mongoose.Schema({
   modelId: { type: Number, unique: true },
