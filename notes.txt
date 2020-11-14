@@ -1,3 +1,4 @@
 To get test data base to work, we would need to decouple the database to the schema models in order to resuse them. Each time you call require, it will read the datbase that is required at the top of the file. Helper functions should be separated from seeding file as well.
 
-CircleCi has some
+CircleCi was probably the most frustrating thing. During setup, circle autopopulated my repo with a config file that sent me down a long and frustrating rabbithole. After watching a few videos and seeing some patterns in basic configs, I went back to the docks and found a similar example to work off of. Finally succeeded in making it work.
+

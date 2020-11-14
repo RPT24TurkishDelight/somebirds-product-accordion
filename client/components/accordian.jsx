@@ -9,14 +9,13 @@ const Accordian = (props) => {
     setActive(active === '' ? 'active' : '')
   }
 
-
   return (
     <div className={'accordian-section'}>
       <button className={`accordian`} >
         <p className='accordian_title'>{props.title}</p>
       </button>
       <div className='accordian_content'>
-        <p className='accordian_text'>{props.text}</p>
+        <p className='accordian_text'>{props.content}</p>
       </div>
     </div>
   )

@@ -17,7 +17,6 @@ app.get('/products/:shoeName', (req, res) => {
     if (err) {
       res.sendStatus(404);
     }
-    console.log('////////server/////////', doc[0]);
     res.send(doc[0]);
   });
 })
