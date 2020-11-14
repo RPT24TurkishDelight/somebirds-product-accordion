@@ -5,8 +5,9 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --watch"
+    "test": "mocha spec/db-spec.js; RES=$?; kill %1; exit $RES",
+    "build": "webpack --watch",
+    "db:seed": "node database/seed.js"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,10 @@
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",
     "@babel/preset-react": "^7.12.5",
-    "babel-loader": "^8.1.0"
+    "babel-loader": "^8.1.0",
+    "chai": "^4.2.0",
+    "eslint": "^7.13.0",
+    "lorem-ipsum": "^2.0.3",
+    "mocha": "^8.2.1"
   }
 }

@@ -1,11 +1,10 @@
 const mongoose = require('mongoose');
 const db = require('./index.js');
-//mongoose.Promise = global.Promise;
 
 const shoeSchema = new mongoose.Schema({
-  modelId: Number,
+  modelId: { type: Number, unique: true },
   name: String,
-  coreFeatures: String,
+  coreFeatures: [ { type: String } ],
   description: String
 });
 
@@ -15,7 +14,7 @@ const highlightsSchema = new mongoose.Schema({
   featurePurpose: String,
   description: String,
   imgUrl: String
-})
+});
 
 const ShoeData = mongoose.model('Shoe', shoeSchema);
 const HighlightData = mongoose.model('Highlight', highlightsSchema);
