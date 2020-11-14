@@ -12,6 +12,7 @@ app.use(express.static(__dirname + '/public'));
 
 app.get('/products/:shoeId', (req, res) => {
   console.log('inside GET api');
+
 })
 
 
