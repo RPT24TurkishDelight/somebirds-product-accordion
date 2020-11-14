@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
-    "test": "mocha spec/db-spec.js; RES=$?; kill %1; exit $RES",
+    "test": "mocha spec/db-spec.js;",
     "build": "webpack --watch",
     "db:seed": "node database/seed.js"
   },
