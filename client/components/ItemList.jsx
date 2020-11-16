@@ -1,7 +1,6 @@
 import React from 'react';
 
 const ItemList = (props) => {
-  console.log(props);
   if (props.list === undefined) {
     return (
       <div className='features_list'>
@@ -13,7 +12,7 @@ const ItemList = (props) => {
     });
     return (
       <div className='features_list'>
-        <ul>{items}</ul>
+        <ul className='list'>{items}</ul>
       </div>
     )
   }

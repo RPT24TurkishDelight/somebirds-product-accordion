@@ -23,7 +23,6 @@ const ProductMenu = (props) => {
 
   return (
     <div className='menu'>
-      {console.log('state: ', shoeData)}
       <Accordian title='Core Features' content={<ItemList list={shoeData.coreFeatures}/>} />
       <Accordian title='Description' content={shoeData.description} contentType='text'/>
       <Accordian title='Shipping & returns' contentType='text' content='Free shipping on orders over $50, and our no questions asked return policy for shoes through January 15. Lightly worn shoes get donated to Soles4Souls.'/>
