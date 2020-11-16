@@ -1,0 +1,35 @@
+.accordion-section {
+  width: 20%;
+}
+
+.accordion {
+  background-color:white;
+  color: black;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  border-style: none none solid none;
+  transition: 0.4s;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.accordion:hover {
+  background-color: rgb(140, 247, 241);
+}
+
+.rotate {
+  transform: rotate(90deg);
+}
+
+.accordion_content {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0px;
+  overflow: hidden;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.active {
+
+}
