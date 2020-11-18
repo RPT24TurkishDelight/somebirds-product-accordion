@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
-    "test": "mocha spec/db-spec.js;",
+    "test": "mocha spec/",
     "build": "webpack --watch",
     "db:seed": "node database/seed.js"
   },
@@ -34,6 +34,7 @@
     "babel-loader": "^8.1.0",
     "chai": "^4.2.0",
     "eslint": "^7.13.0",
+    "jest": "^26.6.3",
     "lorem-ipsum": "^2.0.3",
     "mocha": "^8.2.1"
   }

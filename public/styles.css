@@ -28,7 +28,7 @@
 }
 
 .accordion_title {
-  font-family: helvetica;
+  font-family: Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 12px;
   line-height: 1.75;
@@ -45,7 +45,7 @@
   line-height: 1.5;
   letter-spacing: 0.5px;
   margin: 0px;
-  padding: 18px;
+  padding: 3px 11px 18px;
   color: rgb(33, 42, 47);
 }
 

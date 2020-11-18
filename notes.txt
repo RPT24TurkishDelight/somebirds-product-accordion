@@ -2,3 +2,4 @@ To get test data base to work, we would need to decouple the database to the sch
 
 CircleCi was probably the most frustrating thing. During setup, circle autopopulated my repo with a config file that sent me down a long and frustrating rabbithole. After watching a few videos and seeing some patterns in basic configs, I went back to the docks and found a similar example to work off of. Finally succeeded in making it work.
 
+React Hooks has been a wonderful expereince, although I have struggled during my build for siblings to communicate in a top down approach. I build each accordian piece to open or close itself based on a click. But I also needed that click to affect the other components.
