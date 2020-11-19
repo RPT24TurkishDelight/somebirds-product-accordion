@@ -1,6 +1,7 @@
 import React from 'react';
 
 const ItemList = (props) => {
+
   if (props.list === undefined) {
     return (
       <div className='features_list'>

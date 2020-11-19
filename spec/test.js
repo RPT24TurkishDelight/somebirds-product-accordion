@@ -1,11 +1,7 @@
-describe('Accordian Component', function() {
+import React from 'react';
+import ReactDOM from 'react-dom';
+import ProductMenu from '../client/components/productMenu.jsx';
 
-  beforeEach(function() {
-    console.log('testing')
-  });
-  //stateless component should exist - productmenu
-  xit('should seed database into localhost', function() {
-    //expect...
-  });
-
-});
+test('writing first test', () => {
+  expect(1+2).toBe(3);
+})
