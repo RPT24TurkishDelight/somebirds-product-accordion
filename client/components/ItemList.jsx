@@ -12,7 +12,7 @@ const ItemList = (props) => {
       return <li>{item}</li>
     });
     return (
-      <div className='features_list'>
+      <div className='accordion_text'>
         <ul className='list'>{items}</ul>
       </div>
     )

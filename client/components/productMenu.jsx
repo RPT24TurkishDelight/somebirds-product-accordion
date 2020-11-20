@@ -7,8 +7,8 @@ import axios from 'axios';
 
 const ProductMenu = (props) => {
 
-  const[modelName, setModelName] = useState(props.modelName);
-  const[shoeData, setShoeData] = useState({});
+  const [modelName, setModelName] = useState(props.modelName);
+  const [shoeData, setShoeData] = useState({});
   const [collapseId, setCollapseId] = useState(null);
 
   useEffect(() => {
@@ -28,6 +28,10 @@ const ProductMenu = (props) => {
       setCollapseId(null);
     }
   };
+
+  const testIdOpen = () => {
+    return collapseId;
+  }
 
   return (
     <div className='menu'>

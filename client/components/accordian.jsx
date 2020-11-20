@@ -29,13 +29,18 @@ const Accordian = (props) => {
     setIcon(status === 'closed' ? 'icon' : 'icon rotate');
   }, [status]);
 
+  const content = (props.index === 1) ?
+                  props.content :
+                  <p className='accordion_text'>{props.content}</p>
+
   return (
     <div className='accordion-section'>
       <button className={`accordion ${status}`} onClick={() => toggle()}>
         <p className='accordion_title'>{props.title} <Chevron className={`${icon}`} height={10} width={10} fill={'black'}/></p>
       </button>
       <div className={`accordion_content`} ref={element} style={{maxHeight: `${height}`}}>
-        <p className='accordion_text'>{props.content}</p>
+        {content}
+        {/* <p className='accordion_text'>{props.content}</p> */}
       </div>
     </div>
   )
