@@ -19,6 +19,9 @@ const ProductMenu = (props) => {
     .then((response) => {
       setShoeData(response.data);
     })
+    .catch((err) => {
+      return err;
+    });
   }, []);
 
   const openId = (e, id) => {
@@ -28,10 +31,6 @@ const ProductMenu = (props) => {
       setCollapseId(null);
     }
   };
-
-  const testIdOpen = () => {
-    return collapseId;
-  }
 
   return (
     <div className='menu'>
