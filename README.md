@@ -1,4 +1,4 @@
-# somebirdsProductInfoMenu
+# somebirds-product-accordion
 
 ## Repo Setup
 ```
