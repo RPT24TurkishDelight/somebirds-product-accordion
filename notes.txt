@@ -1,9 +1,0 @@
-To get test data base to work, we would need to decouple the database to the schema models in order to resuse them. Each time you call require, it will read the datbase that is required at the top of the file. Helper functions should be separated from seeding file as well.
-
-CircleCi was probably the most frustrating thing. During setup, circle autopopulated my repo with a config file that sent me down a long and frustrating rabbithole. After watching a few videos and seeing some patterns in basic configs, I went back to the docks and found a similar example to work off of. Finally succeeded in making it work.
-
-React Hooks has been a wonderful expereince, although I have struggled during my build for siblings to communicate in a top down approach. I build each accordian piece to open or close itself based on a click. But I also needed that click to affect the other components. useEffect helped identify when the status changed (of being opened or closed) and then triggered a change to the css state.
-
-Jest/enzyme and react have taken up the better portion of 3 days now. React 17 was released less than a month ago and isn't compatible with the latest Enzyme adapter. As a result, I've tried to avoid using enzyme but testing hooks makes it apparent to need enzyme. Struggling to find a solution currently to this issues so I can test things.
-
-teste
