@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const helpers = require('./database/helpers.js')
+const helpers = require('./database/helpers.js');
 const port = 3002;
 
 const app = express();
@@ -18,8 +18,10 @@ app.get('/products/:shoeName/summary', (req, res) => {
     }
     res.send(doc[0]);
   });
-})
-
-app.listen(port, () => {
-  console.log(`Listening on port ${port}`);
 });
+
+module.exports = app;
+
+// app.listen(port, () => {
+//   console.log(`Listening on port ${port}`);
+// });

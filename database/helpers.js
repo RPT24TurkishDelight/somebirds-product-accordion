@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-//const db = require('./index.js');
 const Shoe = require('../database/Product.js').shoe;
 
 const getShoeData = (shoeName, cb) => {
@@ -7,7 +6,7 @@ const getShoeData = (shoeName, cb) => {
     if (err) {
       cb(err, null)
     } else {
-      console.log(doc);
+      //console.log(doc);
       cb(null, doc);
     }
   });

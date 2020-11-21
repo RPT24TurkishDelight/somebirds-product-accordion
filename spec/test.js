@@ -4,6 +4,8 @@ import TestRenderer from 'react-test-renderer';
 import ProductMenu from '../client/components/productMenu.jsx';
 import Accordian from '../client/components/accordian.jsx';
 import ItemList from '../client/components/ItemList.jsx';
+import request from "supertest";
+//import app from "../server.js";
 //will not work with react 17 --> not sure how to replace for testing
 import { mount, shallow } from 'enzyme';
 
@@ -30,6 +32,7 @@ describe ('components render to page', () => {
   });
 
 describe('Product Menu', () => {
+
   test('Renders 4 accordion components', function() {
     let testRenderer = TestRenderer.create(<ProductMenu modelName={'mens-wool-runners'}/>);
     let testInstance = testRenderer.root;
@@ -37,5 +40,18 @@ describe('Product Menu', () => {
   });
 
 });
+
+// describe('API requests', () => {
+
+//   test('returns the correct dat from an API request', async function() {
+//     await request(app)
+//       .get('/products/mens-wool-runners/summary')
+//       .then(response => {
+//         expect(response.statusCode).toBe(200);
+//       });
+//   });
+
+// });
+
 
 
