@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import Chevron from './chevron.jsx';
 
-const Accordian = (props) => {
+const Accordion = (props) => {
   let start = (props.openedSectionId === props.index) ? 'open' : 'closed';
   //console.log(`initial state for ${props.index}: ${start}`);
   const [status, setStatus] = useState(start);
@@ -46,4 +46,4 @@ const Accordian = (props) => {
   )
 }
 
-export default Accordian;
+export default Accordion;
