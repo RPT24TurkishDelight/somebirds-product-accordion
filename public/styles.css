@@ -1,9 +1,37 @@
-/* .accordion-section {
-  width: 25%;
-} */
+.accordion-section {
+  width: 30%;
+}
 .highlight-icon {
-  border: solid black 1px;
   margin: 10px;
+}
+
+.icon-text {
+  width: 75px;
+  float:left;
+  margin: 10px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: rgb(33, 42, 47);
+  line-height: 1.5;
+  font-size: 12px;
+  text-align: center;
+}
+
+#icon-box {
+  width: 30%;
+}
+
+.icon_title {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.75;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+  color: rgb(33, 42, 47);
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
 }
 
 .accordion {
@@ -22,7 +50,7 @@
   text-align: left;
 }
 
-.icon {
+.chevron {
   float: right;
   transition: 0.5s;
 }

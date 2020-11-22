@@ -26,7 +26,7 @@ const Accordion = (props) => {
   useEffect( () => {
     // console.log('inside use effect - accordion');
     setHeight(status === 'closed' ? '0px' : `${element.current.scrollHeight}px`);
-    setIcon(status === 'closed' ? 'icon' : 'icon rotate');
+    setIcon(status === 'closed' ? 'chevron' : 'chevron rotate');
   }, [status]);
 
   const content = (props.index === 1) ?

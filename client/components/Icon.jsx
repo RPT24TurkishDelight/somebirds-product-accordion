@@ -6,7 +6,7 @@ function Icon(props) {
   content.innerHTML = props.content;
 
   return (
-    <div>
+    <div className='icon-text'>
       <svg
         className='highlight-icon'
         height={props.height || 50}
@@ -16,7 +16,7 @@ function Icon(props) {
         dangerouslySetInnerHTML={{__html: props.content}}
       >
       </svg>
-      <p>{props.text}</p>
+      <p className='icon-des'>{props.text}</p>
     </div>
   )
  }
