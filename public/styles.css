@@ -1,6 +1,10 @@
 /* .accordion-section {
   width: 25%;
 } */
+.highlight-icon {
+  border: solid black 1px;
+  margin: 10px;
+}
 
 .accordion {
   background-color:white;
