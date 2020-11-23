@@ -2,9 +2,6 @@ import React from 'react';
 
 function Icon(props) {
 
-  let content = document.createElement('html');
-  content.innerHTML = props.content;
-
   return (
     <div className='icon-text'>
       <svg

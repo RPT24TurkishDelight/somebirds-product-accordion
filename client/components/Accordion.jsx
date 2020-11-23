@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Chevron from './chevron.jsx';
 
 const Accordion = (props) => {
+
   let start = (props.openedSectionId === props.index) ? 'open' : 'closed';
   const [status, setStatus] = useState(start);
 
