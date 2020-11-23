@@ -1,24 +1,29 @@
 .accordion-section {
-  width: 30%;
+  width: 100%;
 }
 .highlight-icon {
   margin: 10px;
 }
 
+.menu {
+  width: 33.33%;
+}
+
 .icon-text {
   width: 75px;
-  float:left;
-  margin: 10px;
+  display: inline-block;
+  width: 33.33%;
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 400;
   color: rgb(33, 42, 47);
   line-height: 1.5;
   font-size: 12px;
   text-align: center;
+  vertical-align: top;
 }
 
 #icon-box {
-  width: 30%;
+  width: 100%;
 }
 
 .icon_title {
@@ -30,7 +35,7 @@
   text-transform: uppercase;
   color: rgb(33, 42, 47);
   margin: 0px;
-  padding: 0px;
+  padding: 10px;
   text-align: center;
 }
 
@@ -42,6 +47,7 @@
   width: 100%;
   text-align: left;
   border-style: solid none none none;
+  border-color: rgb(211, 212, 213);
   outline: none;
   transition: 0.4s;
 }

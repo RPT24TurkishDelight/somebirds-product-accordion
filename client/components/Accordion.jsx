@@ -4,11 +4,9 @@ import Chevron from './chevron.jsx';
 
 const Accordion = (props) => {
   let start = (props.openedSectionId === props.index) ? 'open' : 'closed';
-  //console.log(`initial state for ${props.index}: ${start}`);
   const [status, setStatus] = useState(start);
-  //console.log(status);
+
   if(status !== start) {
-    console.log('triggered');
     setStatus(start);
   }
 
@@ -19,16 +17,14 @@ const Accordion = (props) => {
   const toggle = (e) => {
     props.click(e, props.index);
     setStatus(status === 'closed' ? 'open' : 'closed');
-    // setHeight(status === 'open' ? '0px' : `${element.current.scrollHeight}px`);
-    // setIcon(status === 'open' ? 'icon' : 'icon rotate');
   }
 
   useEffect( () => {
-    // console.log('inside use effect - accordion');
     setHeight(status === 'closed' ? '0px' : `${element.current.scrollHeight}px`);
     setIcon(status === 'closed' ? 'chevron' : 'chevron rotate');
   }, [status]);
 
+  //check if it needs to render a list component
   const content = (props.index === 1) ?
                   props.content :
                   <p className='accordion_text'>{props.content}</p>
@@ -40,7 +36,6 @@ const Accordion = (props) => {
       </button>
       <div className={`accordion_content`} ref={element} style={{maxHeight: `${height}`}}>
         {content}
-        {/* <p className='accordion_text'>{props.content}</p> */}
       </div>
     </div>
   )
