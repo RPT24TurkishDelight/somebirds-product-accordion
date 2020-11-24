@@ -28,11 +28,7 @@ const ProductMenu = (props) => {
   }, []);
 
   const openId = (e, id) => {
-    if (collapseId !== id) {
-      setCollapseId(id);
-    } else {
-      setCollapseId(null);
-    }
+    (collapseId !== id) ? setCollapseId(id) : setCollapseId(null)
   };
 
   return (
