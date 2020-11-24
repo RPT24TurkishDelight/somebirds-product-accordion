@@ -11,7 +11,7 @@ describe ('components render to page', () => {
 
   test('renders whole accordion without crashing', function() {
     const div = document.createElement('div');
-    ReactDOM.render(<ProductMenu />, div);
+    ReactDOM.render(<ProductMenu modelName={'mens-wool-runners'}/>, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 
@@ -23,7 +23,7 @@ describe ('components render to page', () => {
 
   test('renders item list with crashing', function() {
     const div = document.createElement('div');
-    ReactDOM.render(<ItemList />, div);
+    ReactDOM.render(<ItemList list={[]}/>, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 
