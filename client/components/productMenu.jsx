@@ -13,7 +13,7 @@ const ProductMenu = (props) => {
   const [coreFeatures, setCoreFeatures] = useState([]);
   const [collapseId, setCollapseId] = useState(null);
 
-  useEffect(() => {
+  useEffect( () => {
     axios({
       method: 'get',
       url: `/products/${props.modelName}/summary`

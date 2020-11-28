@@ -5,14 +5,14 @@ import Chevron from './chevron.jsx';
 const Accordion = (props) => {
 
   let start = (props.openedSectionId === props.index) ? 'open' : 'closed';
-  const [status, setStatus] = useState(start);
+  const [status, setStatus] = useState('closed');
 
   if(status !== start) {
     setStatus(start);
   }
 
   const [height, setHeight] = useState('0px');
-  const [icon, setIcon] = useState('icon')
+  const [icon, setIcon] = useState('chevron')
   const element = useRef(null);
 
   const toggle = (e) => {
