@@ -16,7 +16,7 @@ const ProductMenu = (props) => {
   useEffect( () => {
     axios({
       method: 'get',
-      url: `/products/${props.modelName}/summary`
+      url: `http://localhost:3002/products/${props.modelName}/summary`
     })
     .then((response) => {
       setShoeData(response.data);
