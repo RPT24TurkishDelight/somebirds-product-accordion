@@ -12,9 +12,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(express.static(__dirname + '/public'));
 
-app.get('/products/:shoeName/summary', (req, res) => {
+app.get('/products/:shoeId/summary', (req, res) => {
 
-  helpers.getShoeData(req.params.shoeName, (err, doc) => {
+  helpers.getShoeData(req.params.shoeId, (err, doc) => {
     if (err) {
       res.sendStatus(404);
     }
@@ -23,7 +23,3 @@ app.get('/products/:shoeName/summary', (req, res) => {
 });
 
 module.exports = app;
-
-// app.listen(port, () => {
-//   console.log(`Listening on port ${port}`);
-// });

@@ -9,6 +9,7 @@ import axios from 'axios';
 const ProductMenu = (props) => {
 
   const [modelName, setModelName] = useState(props.modelName);
+  const [modelId, setModelId] = useState(props.modelId);
   const [shoeData, setShoeData] = useState({});
   const [coreFeatures, setCoreFeatures] = useState([]);
   const [collapseId, setCollapseId] = useState(null);
@@ -16,7 +17,7 @@ const ProductMenu = (props) => {
   useEffect( () => {
     axios({
       method: 'get',
-      url: `http://localhost:3002/products/${props.modelName}/summary`
+      url: `/products/${props.modelId}/summary`
     })
     .then((response) => {
       setShoeData(response.data);

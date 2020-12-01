@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 const Shoe = require('../database/Product.js').shoe;
 
-const getShoeData = (shoeName, cb) => {
-  Shoe.find({name: shoeName}, function(err, doc) {
+const getShoeData = (modelId, cb) => {
+  Shoe.find({modelId: modelId}, function(err, doc) {
     if (err) {
       cb(err, null)
     } else {
