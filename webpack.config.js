@@ -20,6 +20,21 @@ module.exports = {
             presets: ['@babel/preset-react', '@babel/preset-env']
           }
         }
+      },
+      {
+        test: /\.css$/,
+        loader: 'style!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'
+        // include: SRC_DIR,
+        // use: [
+        //   'style-loader',
+        //   {
+        //     loader: 'css-loader'
+        //     // options: {
+        //     //   importLoaders: 1,
+        //     //   modules: true
+        //     // }
+        //   }
+        // ]
       }
     ]
   }

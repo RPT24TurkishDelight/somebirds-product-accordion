@@ -4,6 +4,7 @@ import Accordion from './Accordion.jsx';
 import ItemList from './ItemList.jsx';
 import IconBox from './IconBox.jsx';
 import axios from 'axios';
+import accordionStyles from '../accordionStyles.module.css'
 
 
 const ProductMenu = (props) => {
