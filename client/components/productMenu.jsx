@@ -4,24 +4,28 @@ import Accordion from './Accordion.jsx';
 import ItemList from './ItemList.jsx';
 import IconBox from './IconBox.jsx';
 import axios from 'axios';
-import accordionStyles from '../accordionStyles.module.css'
+import accStyles from './css/accordionStyles.module.css';
 
 
 const ProductMenu = (props) => {
 
-  const [modelName, setModelName] = useState(props.modelName);
+  const [modelName, setModelName] = useState('mens-wool-runners');
   const [modelId, setModelId] = useState(props.modelId);
   const [shoeData, setShoeData] = useState({});
   const [coreFeatures, setCoreFeatures] = useState([]);
   const [collapseId, setCollapseId] = useState(null);
 
+
+
   useEffect( () => {
+
     axios({
       method: 'get',
       url: `/products/${props.modelId}/summary`
     })
     .then((response) => {
       setShoeData(response.data);
+      //setModelName(response.modelName);
       setCoreFeatures(response.data.coreFeatures);
     })
     .catch((err) => {
@@ -34,7 +38,7 @@ const ProductMenu = (props) => {
   };
 
   return (
-    <div className='menu'>
+    <div className={accStyles.menu}>
       <IconBox modelName={modelName}/>
       <Accordion title='Core Features' index={1} openedSectionId={collapseId} click={openId} content={<ItemList list={coreFeatures}/>} />
       <Accordion title='Description' index={2} openedSectionId={collapseId} click={openId} content={shoeData.description} contentType='text'/>

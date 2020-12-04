@@ -1,4 +1,5 @@
 import React from 'react';
+import accStyles from './css/accordionStyles.module.css';
 
 const ItemList = (props) => {
 
@@ -7,8 +8,8 @@ const ItemList = (props) => {
   });
 
   return (
-    <div className='accordion_text'>
-      <ul className='list'>{items}</ul>
+    <div className={accStyles.accordionText}>
+      <ul className={accStyles.list}>{items}</ul>
     </div>
   )
 }

@@ -1,0 +1,22 @@
+.iconBox {
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+.iconTitle {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.75;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+  color: rgb(33, 42, 47);
+  margin-bottom: 8px;
+  padding: 10px;
+  text-align: center;
+}
+
+.threeIcons {
+  margin-right: 5%;
+  margin-left: 5%;
+}

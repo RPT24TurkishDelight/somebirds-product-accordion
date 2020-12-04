@@ -22,20 +22,19 @@ module.exports = {
         }
       },
       {
-        test: /\.css$/,
-        loader: 'style!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'
-        // include: SRC_DIR,
-        // use: [
-        //   'style-loader',
-        //   {
-        //     loader: 'css-loader'
-        //     // options: {
-        //     //   importLoaders: 1,
-        //     //   modules: true
-        //     // }
-        //   }
-        // ]
-      }
+        test: /\.css$/i,
+        use: [
+          {
+            loader: 'style-loader',
+            options: {
+              attributes: {
+                nonce: '12345678',
+              },
+            },
+          },
+          'css-loader',
+        ],
+      },
     ]
   }
 }

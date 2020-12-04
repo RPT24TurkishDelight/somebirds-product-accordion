@@ -1,7 +1,7 @@
-.accordion-section {
+.accordionSection {
   width: 100%;
 }
-.highlight-icon {
+.highlightIcon {
   margin: 5px;
 }
 
@@ -9,7 +9,7 @@
   width: 100%;
 }
 
-.icon-text {
+.iconText {
   display: inline-block;
   width: 33.33%;
   font-family: Helvetica, Arial, sans-serif;
@@ -21,18 +21,18 @@
   text-align: center;
   vertical-align: top;
 }
-.icon-des {
+.iconDes {
   margin-left: 15%;
   margin-right: 15%;
   align-items: center;
 }
 
-#icon-box {
+.iconBox {
   width: 100%;
   margin-bottom: 18px;
 }
 
-.icon_title {
+.iconTitle {
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 12px;
@@ -45,7 +45,7 @@
   text-align: center;
 }
 
-.three-icons {
+.threeIcons {
   margin-right: 5%;
   margin-left: 5%;
 }
@@ -76,7 +76,7 @@
   transform: rotate(180deg);
 }
 
-.accordion_title {
+.accordionTitle {
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 12px;
@@ -88,7 +88,7 @@
   padding: 0px;
 }
 
-.accordion_text {
+.accordionText {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
@@ -98,7 +98,7 @@
   color: rgb(33, 42, 47);
 }
 
-.accordion_content {
+.accordionContent {
   padding: 0px;
   background-color: white;
   max-height: 0px;
