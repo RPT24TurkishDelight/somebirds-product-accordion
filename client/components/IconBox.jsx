@@ -4,17 +4,17 @@ import accStyles from './css/IconBox.module.css'
 
 const IconBox = (props) => {
 
-  let titleWords = () => {
-    let words = props.modelName.split('-');
-    words.shift();
-    return words.join(' ');
-  };
+  // let titleWords = () => {
+  //   let words = props.modelName.split('-');
+  //   words.shift();
+  //   return words.join(' ').slice(0,-1);
+  // };
 
-  let name = titleWords();
+  // let name = titleWords();
 
   return (
     <div className={accStyles.iconBox}>
-      <p className={accStyles.iconTitle}>{`${name} highlights`}</p>
+      <p className={accStyles.iconTitle}>{`${props.modelName} highlights`}</p>
       <div className={accStyles.threeIcons}>
         <Icon viewBox="0 0 512 512" text='Made With Merino Wool' content={`<g>
           <g>
