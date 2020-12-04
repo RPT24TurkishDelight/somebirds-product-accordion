@@ -1,11 +1,12 @@
 import React from 'react';
+import accStyles from './css/Icon.module.css';
 
 function Icon(props) {
 
   return (
-    <div className='icon-text'>
+    <div className={accStyles.iconText}>
       <svg
-        className='highlight-icon'
+        className={accStyles.highlightIcon}
         height={props.height || 48}
         width={props.width || 48}
         viewBox={props.viewBox}
@@ -13,7 +14,7 @@ function Icon(props) {
         dangerouslySetInnerHTML={{__html: props.content}}
       >
       </svg>
-      <p className='icon-des'>{props.text}</p>
+      <p className={accStyles.iconDes}>{props.text}</p>
     </div>
   )
  }

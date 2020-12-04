@@ -1,5 +1,6 @@
 import React from 'react';
 import Icon from './Icon.jsx';
+import accStyles from './css/IconBox.module.css'
 
 const IconBox = (props) => {
 
@@ -12,9 +13,9 @@ const IconBox = (props) => {
   let name = titleWords();
 
   return (
-    <div id='icon-box'>
-      <p className='icon_title'>{`${name} highlights`}</p>
-      <div className='three-icons'>
+    <div className={accStyles.iconBox}>
+      <p className={accStyles.iconTitle}>{`${name} highlights`}</p>
+      <div className={accStyles.threeIcons}>
         <Icon viewBox="0 0 512 512" text='Made With Merino Wool' content={`<g>
           <g>
             <path d="M497,0h-91c-24.813,0-45,20.187-45,45s20.187,45,45,45h15c16.262,0,30,14.196,30,31s-13.738,31-30,31h-14.963

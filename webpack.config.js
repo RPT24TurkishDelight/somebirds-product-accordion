@@ -20,7 +20,21 @@ module.exports = {
             presets: ['@babel/preset-react', '@babel/preset-env']
           }
         }
-      }
+      },
+      {
+        test: /\.css$/i,
+        use: [
+          {
+            loader: 'style-loader',
+            options: {
+              attributes: {
+                nonce: '12345678',
+              },
+            },
+          },
+          'css-loader',
+        ],
+      },
     ]
   }
 }
