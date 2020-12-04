@@ -3,7 +3,9 @@ const db = require('./index.js');
 
 const shoeSchema = new mongoose.Schema({
   modelId: { type: Number, unique: true },
+  gender: { type: String, enum: ["men's", "women's"] },
   name: String,
+  price: Number,
   coreFeatures: [ { type: String } ],
   description: String
 });
