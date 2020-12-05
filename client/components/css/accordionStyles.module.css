@@ -105,3 +105,26 @@
   overflow: hidden;
   transition: 0.5s ease;
 }
+
+.headerName{
+  font-size: 32px;
+  font-family: helvetica;
+  line-height: 0px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 0px;
+}
+
+.headerPrice {
+  font-weight: 400;
+  color: rgb(33, 42, 47);
+  line-height: 1.5;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  margin: 0px 0px 0px;
+  padding: 0px;
+}
+
+.stars {
+  margin: 9px 0px 18px
+}
