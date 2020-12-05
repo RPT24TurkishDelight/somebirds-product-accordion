@@ -4,14 +4,6 @@ import accStyles from './css/IconBox.module.css'
 
 const IconBox = (props) => {
 
-  // let titleWords = () => {
-  //   let words = props.modelName.split('-');
-  //   words.shift();
-  //   return words.join(' ').slice(0,-1);
-  // };
-
-  // let name = titleWords();
-
   return (
     <div className={accStyles.iconBox}>
       <p className={accStyles.iconTitle}>{`${props.modelName} highlights`}</p>

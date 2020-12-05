@@ -21,7 +21,6 @@ const ProductMenu = (props) => {
     let queryString = window.location.search;
     let params = new URLSearchParams(queryString);
     let productId = params.get('prod')
-    console.log(productId);
 
     axios({
       method: 'get',
