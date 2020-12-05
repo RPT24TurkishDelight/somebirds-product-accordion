@@ -18,13 +18,18 @@ const ProductMenu = (props) => {
 
 
   useEffect( () => {
+    let queryString = window.location.search;
+    let params = new URLSearchParams(queryString);
+    let productId = params.get('prod')
+    console.log(productId);
 
     axios({
       method: 'get',
-      url: `/products/${props.modelId}/summary`
+      url: `/products/${productId}/summary`
     })
     .then((response) => {
       setShoeData(response.data);
+      setModelId(productId);
       setModelName(response.data.name);
       setCoreFeatures(response.data.coreFeatures);
     })

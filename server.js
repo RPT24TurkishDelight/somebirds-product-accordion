@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const helpers = require('./database/helpers.js');
 const port = 3002;
 const cors = require('cors');
+const axios = require('axios');
 
 const app = express();
 
