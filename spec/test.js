@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import ProductMenu from '../client/components/productMenu.jsx';
 import Accordion from '../client/components/Accordion.jsx';
 import ItemList from '../client/components/ItemList.jsx';
-import request from "supertest";
 import { mount, shallow } from 'enzyme';
 import 'babel-polyfill'
 
