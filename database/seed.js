@@ -34,7 +34,7 @@ const dataGenerator = () => {
     gender: "men's",
     name: 'tree dashers',
     price: 120,
-    coreFeatures: ['Renewable Materials','Machine Washable','Minimizes Odor','Flexibly Conforms To Your Movements'],
+    coreFeatures: ['Renewable Materials','Machine Washable','Aerodynamic','Flexibly Conforms To Your Movements'],
     description: 'Our most technical shoe yet, the Tree Dasher reimagines the traditional running shoe with natural materials engineered for serious performance. - Heel Drop: 7mm (Forefoot: 15.5mm, Heel: 22.5mm) - Type: Neutral, Cushioned, Light Stability Running Shoe'
   }];
 
