@@ -6,24 +6,22 @@ import accStyles from './css/accordionStyles.module.css';
 const Header = (props) => {
 
   const [modelName, setModelName] = useState('fake name');
-  const [modelId, setModelId] = useState(1);
+  const [modelId, setModelId] = useState(props.modelId);
   const [shoeData, setShoeData] = useState({});
   const [header, setHeaderData] = useState('');
+  const [render, setRender] = useState(false);
 
 
   useEffect( () => {
-    let queryString = window.location.search;
-    let params = new URLSearchParams(queryString);
-    let productId = params.get('prod');
 
     axios({
       method: 'get',
-      url: `/products/${productId}/summary`
+      url: `/products/${modelId}/summary`
     })
     .then((response) => {
       setShoeData(response.data);
-      setModelId(productId);
       setModelName(response.data.name);
+      setRender(true);
     })
     .catch((err) => {
       return err;
@@ -43,16 +41,17 @@ const Header = (props) => {
 
   return (
     <div>
-      {console.log(title)}
-      <h1 className={accStyles.headerName}>{capitalizeWords(title)}</h1>
-        <p className={accStyles.headerPrice}>{`$ ${shoeData.price}`}</p>
-        <div className={accStyles.stars}>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star"></span>
-        </div>
+      {render && <div>
+        <h1 className={accStyles.headerName}>{capitalizeWords(title)}</h1>
+          <p className={accStyles.headerPrice}>{`$ ${shoeData.price}`}</p>
+          <div className={accStyles.stars}>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+          </div>
+      </div>}
     </div>
   )
 }
