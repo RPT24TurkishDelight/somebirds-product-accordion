@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import accStyles from './css/accordionStyles.module.css';
+import starStyles from './css/stars.module.css';
 
 const Header = (props) => {
 
@@ -45,11 +46,11 @@ const Header = (props) => {
         <h1 className={accStyles.headerName}>{capitalizeWords(title)}</h1>
           <p className={accStyles.headerPrice}>{`$ ${shoeData.price}`}</p>
           <div className={accStyles.stars}>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
+            <span className={`${starStyles.fa} ${starStyles['fa-star']} ${starStyles.checked}`}></span>
+            <span className={`${starStyles.fa} ${starStyles['fa-star']} ${starStyles.checked}`}></span>
+            <span className={`${starStyles.fa} ${starStyles['fa-star']} ${starStyles.checked}`}></span>
+            <span className={`${starStyles.fa} ${starStyles['fa-star']} ${starStyles.checked}`}></span>
+            <span className={`${starStyles.fa} ${starStyles['fa-star']}`}></span>
           </div>
       </div>}
     </div>
