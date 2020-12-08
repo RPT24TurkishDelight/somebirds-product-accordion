@@ -45,13 +45,20 @@ const Header = (props) => {
       {render && <div>
         <h1 className={accStyles.headerName}>{capitalizeWords(title)}</h1>
           <p className={accStyles.headerPrice}>{`$ ${shoeData.price}`}</p>
-          <div className={accStyles.stars}>
+          <div class={accStyles.stars}>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+          </div>
+          {/* <div className={accStyles.stars}>
             <span className={`${starStyles.fa} ${starStyles['fa-star']} ${starStyles.checked}`}></span>
             <span className={`${starStyles.fa} ${starStyles['fa-star']} ${starStyles.checked}`}></span>
             <span className={`${starStyles.fa} ${starStyles['fa-star']} ${starStyles.checked}`}></span>
             <span className={`${starStyles.fa} ${starStyles['fa-star']} ${starStyles.checked}`}></span>
             <span className={`${starStyles.fa} ${starStyles['fa-star']}`}></span>
-          </div>
+          </div> */}
       </div>}
     </div>
   )
