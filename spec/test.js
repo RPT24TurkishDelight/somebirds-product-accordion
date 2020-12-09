@@ -33,7 +33,7 @@ describe('Product Menu', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<ProductMenu modelName={'mens-wool-runners'}/>);
+    wrapper = mount(<ProductMenu render={true}/>);
   });
 
   test('Renders 4 accordion components', function() {
@@ -48,7 +48,6 @@ describe('Product Menu', () => {
   });
 
   test('changes the state for an openId when a piece of the accordion is clicked', () => {
-    wrapper = mount(<ProductMenu modelName={'mens-wool-runners'}/>);
     let button = wrapper.find('.accordion').at(0);
     button.simulate('click');
     expect(wrapper.find(Accordion).at(1).props().openedSectionId).toEqual(1);

@@ -10,11 +10,11 @@ import accStyles from './css/accordionStyles.module.css';
 const ProductMenu = (props) => {
 
   const [modelName, setModelName] = useState('mens-wool-runners');
-  const [modelId, setModelId] = useState(props.modelId);
+  const [modelId, setModelId] = useState(props.modelId || 1);
   const [shoeData, setShoeData] = useState({});
   const [coreFeatures, setCoreFeatures] = useState([]);
   const [collapseId, setCollapseId] = useState(null);
-  const [render, setRender] = useState(false);
+  const [render, setRender] = useState(props.render || false);
 
   useEffect( () => {
 
