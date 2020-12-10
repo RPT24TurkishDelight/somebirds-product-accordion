@@ -109,10 +109,15 @@
 .headerName{
   font-size: 32px;
   font-family: helvetica;
-  line-height: 0px;
   font-weight: 700;
+  line-height: 1.31;
   letter-spacing: 0.5px;
   padding: 0px;
+  margin: 20px 0px 0px;
+}
+
+.headerBox{
+  width: 100%
 }
 
 .headerPrice {

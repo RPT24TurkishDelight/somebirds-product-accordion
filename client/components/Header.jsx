@@ -42,7 +42,7 @@ const Header = (props) => {
 
   return (
     <div>
-      {render && <div>
+      {render && <div classname={accStyles.headerBox}>
         <h1 className={accStyles.headerName}>{capitalizeWords(title)}</h1>
           <p className={accStyles.headerPrice}>{`$ ${shoeData.price}`}</p>
           <div class={accStyles.stars}>
