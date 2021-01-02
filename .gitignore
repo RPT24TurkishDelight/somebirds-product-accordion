@@ -3,3 +3,4 @@ bundle.js
 notes.txt
 *.pem
 *.sh
+.env
