@@ -11,7 +11,8 @@ const Header = (props) => {
   const [modelId, setModelId] = useState(props.modelId);
   const [shoeData, setShoeData] = useState({});
   const [header, setHeaderData] = useState('');
-  const [render, setRender] = useState(false);
+  const [render1, setRender1] = useState(false);
+  const [render2, setRender2] = useState(false);
 
   const [stars, setStars] = useState('4.63');
   const [reviewCount, setReviewCount] = useState(12)
@@ -25,7 +26,7 @@ const Header = (props) => {
     .then((response) => {
       setShoeData(response.data);
       setModelName(response.data.name);
-      setRender(true);
+      setRender1(true);
     })
     .catch((err) => {
       return err;
@@ -43,7 +44,7 @@ const Header = (props) => {
       console.log(response);
       setStars(response.data.rating_average);
       setReviewCount(response.data.review_count);
-      setRender(true);
+      setRender2(true);
     })
     .catch((err) => {
       return err;
@@ -78,7 +79,7 @@ const Header = (props) => {
 
   return (
     <div>
-      {render && <div classname={accStyles.headerBox}>
+      {render1 && render2 && <div classname={accStyles.headerBox}>
         <h1 className={accStyles.headerName}>{capitalizeWords(title)}</h1>
           <p className={accStyles.headerPrice}>{`$ ${shoeData.price}`}</p>
           <div className={accStyles.stars}>
