@@ -37,9 +37,10 @@ const Header = (props) => {
 
     axios({
       method: 'get',
-      url: `/products/${modelId}/rating`
+      url: `/shoes/${modelId}/rating`
     })
     .then((response) => {
+      console.log(response);
       setStars(response.data.rating_average);
       setReviewCount(response.data.review_count);
       setRender(true);
