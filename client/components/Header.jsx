@@ -83,10 +83,10 @@ const Header = (props) => {
         <h1 className={accStyles.headerName}>{capitalizeWords(title)}</h1>
           <p className={accStyles.headerPrice}>{`$ ${shoeData.price}`}</p>
           <div className={accStyles.stars}>
-            <a href="#reviews-container">
+            <a href="#footer-container">
               <div className={accStyles.alignStars}>{buildStars(stars)}</div>
             </a>
-            <a href="#reviews-container">
+            <a href="#footer-container">
               <div className={accStyles.reviewCount}>{`(${reviewCount})`}</div>
               </a>
           </div>
