@@ -12,4 +12,15 @@ const getShoeData = (modelId, cb) => {
   });
 }
 
+const createShoeData = (data, cb) => {
+  Shoe.create(data, (err, shoe) => {
+    if (err) {
+      cb (err, null);
+    } else {
+      cb (null, shoe);
+    }
+  })
+}
+
 module.exports.getShoeData = getShoeData;
+module.exports.createShoeData = createShoeData;
