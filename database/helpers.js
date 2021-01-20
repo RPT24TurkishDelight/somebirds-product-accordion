@@ -33,6 +33,17 @@ const updateShoeData = (data, cb) => {
   })
 }
 
+const deleteShoeData = (data, cb) => {
+  Shoe.deleteOne(data, (err, shoe) => {
+    if (err) {
+      cb(err, null);
+    } else {
+      cb(null, shoe);
+    }
+  })
+}
+
 module.exports.getShoeData = getShoeData;
 module.exports.createShoeData = createShoeData;
 module.exports.updateShoeData = updateShoeData;
+module.exports.deleteShoeData = deleteShoeData;
