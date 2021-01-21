@@ -24,7 +24,6 @@ app.get('/products/:shoeId/summary', (req, res) => {
 });
 
 app.post('/products/create', (req, res) => {
-  console.log(req.body);
   if (req.body === undefined || req.body === '' || Object.keys(req.body).length === 0) {
     res.send('Cannot create from empty').status(406);
   } else {
