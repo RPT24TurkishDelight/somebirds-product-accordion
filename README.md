@@ -1,5 +1,25 @@
 # somebirds-product-accordion
 
+## Crud Operations
+```
+
+
+GET /products/:shoeId/summary
+Replace shoeId with the ID of the product you want to review
+
+POST /products/create
+
+x-www-form-urlencoded JSON format, modelId must be unique.
+
+/products/update
+
+x-www-form-urlencoded JSON format, modelId must be included.
+
+/products/delete
+
+x-www-form-urlencoded JSON format, modelId must be included.
+
+
 ## Repo - For Local Setup
 ```
 npm install
