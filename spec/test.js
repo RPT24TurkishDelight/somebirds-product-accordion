@@ -63,15 +63,16 @@ describe('TestCRUD Operations', () => {
   test('It should respond to the PUT method', () => {
     return request(app)
       .put('/products/update')
-      .send({modelId: 1000, name: 'john'})
+      .send({modelId: 1000, name: 'john', coreFeatures: 'toilet'})
       .then(response => {
+        console.log(response.error);
         expect(response.statusCode).toBe(200);
       })
   });
   test('It should respond to the DELETE method', () => {
     return request(app)
       .delete('/products/delete')
-      .send({modelId: 1000, name: 'john'})
+      .send({modelId: 1000})
       .then(response => {
         expect(response.statusCode).toBe(200);
       })
