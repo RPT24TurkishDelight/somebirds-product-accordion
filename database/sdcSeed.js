@@ -33,4 +33,8 @@ const recordInserter = (count, cb) => {
   }
 }
 
-recordInserter(100, console.log);
+//recordInserter(100, console.log);
+module.exports = {
+  recordCreator: recordCreator,
+  recordInserter: recordInserter
+}

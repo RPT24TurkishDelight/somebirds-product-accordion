@@ -38,7 +38,6 @@ app.post('/products/create', (req, res) => {
 })
 
 app.put('/products/update', (req, res) => {
-  console.log(req.body);
   helpers.updateShoeData(req.body, (err, shoe) => {
     if (err) {
       res.send(err).status(406);
@@ -49,7 +48,6 @@ app.put('/products/update', (req, res) => {
 })
 
 app.delete('/products/delete', (req, res) => {
-  console.log(req.body);
   helpers.deleteShoeData(req.body, (err, shoe) => {
     if (err) {
       res.send(err).status(406);
