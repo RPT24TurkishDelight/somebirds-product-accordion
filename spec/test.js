@@ -58,7 +58,7 @@ describe('TestCRUD Operations', () => {
       .send({modelId: 1000, name: 'john', coreFeatures: 'toilet'})
       .then(response => {
         console.log(response.error);
-        expect(response.statusCode).toBe(200);
+        expect(response.statusCode).equal(200);
       })
   });
   test('It should respond to the DELETE method', () => {
