@@ -7,13 +7,18 @@ const getShoeData = (modelId, cb) => {
     if (err) {
       cb(err, null)
     } else {
-      //console.log(doc);
       cb(null, doc);
     }
   });
 }
 
 const createShoeData = (data, cb) => {
+  data.modelId = parseInt(data.modelId);
+  try {
+    data.coreFeatures = JSON.parse(data.coreFeatures);
+  } catch {
+
+  }
   Shoe.create(data, (err, shoe) => {
     if (err) {
       cb (err, null);
@@ -24,6 +29,13 @@ const createShoeData = (data, cb) => {
 }
 
 const updateShoeData = (data, cb) => {
+  data.modelId = parseInt(data.modelId);
+  try {
+    data.coreFeatures = JSON.parse(data.coreFeatures);
+  } catch {
+
+  }
+  data.price = parseInt(data.price);
   Shoe.updateOne({modelId: data.modelId}, data, (err, shoe) => {
     if (err) {
       cb(err, null);
@@ -34,7 +46,8 @@ const updateShoeData = (data, cb) => {
 }
 
 const deleteShoeData = (data, cb) => {
-  Shoe.deleteOne(data, (err, shoe) => {
+  data.modelId = parseInt(data.modelId);
+  Shoe.deleteOne({modelId: data.modelId}, (err, shoe) => {
     if (err) {
       cb(err, null);
     } else {

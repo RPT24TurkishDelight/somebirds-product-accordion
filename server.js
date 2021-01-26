@@ -49,7 +49,9 @@ app.put('/products/update', (req, res) => {
 
 app.delete('/products/delete', (req, res) => {
   helpers.deleteShoeData(req.body, (err, shoe) => {
+    console.log(err, shoe);
     if (err) {
+      console.log(err);
       res.send(err).status(406);
     } else {
       res.send(shoe).status(200);
