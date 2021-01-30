@@ -1,5 +1,5 @@
 
-DROP TABLE shoes;
+DROP TABLE IF EXISTS shoes;
 
 CREATE TABLE shoes (
 	id serial NOT NULL PRIMARY KEY,
