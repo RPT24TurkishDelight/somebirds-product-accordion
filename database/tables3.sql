@@ -3,7 +3,7 @@ DROP TABLE IF EXISTS shoes;
 
 CREATE TABLE shoes (
 	id serial NOT NULL PRIMARY KEY,
-	data json
+	data jsonb
 );
 
 /*
@@ -19,5 +19,3 @@ CREATE TABLE shoes (
 INSERT INTO shoes (corefeatures, gender, name, price, description) VALUES
     ('{ "lala": "UA502"}', 'Male', 'Aowei', 120, 'Comedy');
 */
-
-
