@@ -21,3 +21,7 @@ INSERT INTO shoes (corefeatures, gender, name, price, description) VALUES
 */
 
 
+-- delete from features where shoe_id = 9999999;
+-- delete from shoes where id = 9999999;
+-- insert into shoes(id, gender, name,  price, description) VALUES(9999999, 'Male', 'Air Force Ones', 90, 'I need two purrs');
+-- insert into features(shoe_id, description) VALUES (9999999, 'So I can get tos'),  (9999999, 'Extra verere babyyyy');
