@@ -25,7 +25,7 @@ const ProductMenu = (props) => {
     .then((response) => {
       setShoeData(response.data);
       setModelName(response.data.name);
-      setCoreFeatures(response.data.coreFeatures);
+      setCoreFeatures(response.data.features);
       setRender(true);
     })
     .catch((err) => {

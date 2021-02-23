@@ -30,8 +30,8 @@ const dataGenerator = () => {
     description: 'Ethically made with ZQ Merino wool, our original sneaker is soft, moisture wicking, and ready for anything. '
   },
   {
-    modelId: 2,
-    gender: "men's",
+    modelId: 9999999,
+    gender: 'men',
     name: 'tree dashers',
     price: 120,
     coreFeatures: ['Renewable Materials','Machine Washable','Aerodynamic','Flexibly Conforms To Your Movements'],
