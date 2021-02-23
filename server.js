@@ -28,7 +28,7 @@ app.post('/products', (req, res) => {
   if (req.body === undefined || req.body === '' || Object.keys(req.body).length === 0) {
     res.send('Cannot create from empty').status(406);
   } else {
-    helpers.createShoeData(req.query.id, req.body, (err, data) => {
+    helpers.createShoeData( req.body, (err, data) => {
       if (err) {
         res.send(err).status(406);
       } else {
@@ -39,7 +39,8 @@ app.post('/products', (req, res) => {
 })
 
 app.put('/products', (req, res) => {
-  helpers.updateShoeData(req.params.id, req.body, (err, shoe) => {
+  console.log(req.body);
+  helpers.updateShoeData(req.query.id, req.body, (err, shoe) => {
     if (err) {
       res.send(err).status(406);
     } else {
@@ -49,10 +50,8 @@ app.put('/products', (req, res) => {
 })
 
 app.delete('/products', (req, res) => {
-  helpers.deleteShoeData(req.body, (err, shoe) => {
-    console.log(err, shoe);
+  helpers.deleteShoeData(req.query.id, (err, shoe) => {
     if (err) {
-      console.log(err);
       res.send(err).status(406);
     } else {
       res.send(shoe).status(200);

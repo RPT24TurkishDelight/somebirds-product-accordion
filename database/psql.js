@@ -17,12 +17,32 @@ const CRUD = {
       }
     })
   },
-  createShoeData: (id, data, cb) => {
-    pool.query(`update shoes set gender = '${data.gender}', name = '${data.name}', price = ${data.price}, features = ARRAY${JSON.stringify(data.features)} where id = ${id};`, (err, result) => {
+  updateShoeData: ( id, data, cb) => {
+    var features = data.features.replace(/"/g,'\'').replace(/ /g,'');
+    pool.query(`update shoes set gender = '${data.gender}', name = '${data.name}', price = ${data.price}, description = '${data.description}', features = ARRAY${features} where id = ${id};`, (err, result) => {
       if (err) {
         cb(err);
       } else {
         cb(null, result);
+      }
+    })
+  },
+  createShoeData: (data, cb) => {
+    var features = data.features.replace(/"/g,'\'').replace(/ /g,'');
+    pool.query(`insert into shoes (gender, name, price, description, features) VALUES ('${data.gender}', '${data.name}', ${data.price}, '${data.description}', ARRAY${features})`, (err, results) => {
+      if (err) {
+        cb(err);
+      } else {
+        cb(null, results);
+      }
+    });
+  },
+  deleteShoeData: (id, cb) => {
+    pool.query(`delete from shoes where id =${id}`, (err, results) => {
+      if (err) {
+        cb(err);
+      } else {
+        cb(null, results);
       }
     })
   }
