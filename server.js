@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const helpers = require('./database/helpers.js');
+const helpers = require('./database/psql.js');
 const port = 3002;
 const cors = require('cors');
 const axios = require('axios');
@@ -19,15 +19,16 @@ app.get('/products/:shoeId/summary', (req, res) => {
     if (err) {
       res.sendStatus(404);
     }
-    res.send(doc[0]);
+    res.send(doc.rows[0]);
   });
 });
 
-app.post('/products/create', (req, res) => {
+app.post('/products', (req, res) => {
+  console.log(req.query, req.body);
   if (req.body === undefined || req.body === '' || Object.keys(req.body).length === 0) {
     res.send('Cannot create from empty').status(406);
   } else {
-    helpers.createShoeData(req.body, (err, data) => {
+    helpers.createShoeData(req.query.id, req.body, (err, data) => {
       if (err) {
         res.send(err).status(406);
       } else {
@@ -37,8 +38,8 @@ app.post('/products/create', (req, res) => {
   }
 })
 
-app.put('/products/update', (req, res) => {
-  helpers.updateShoeData(req.body, (err, shoe) => {
+app.put('/products', (req, res) => {
+  helpers.updateShoeData(req.params.id, req.body, (err, shoe) => {
     if (err) {
       res.send(err).status(406);
     } else {
@@ -47,7 +48,7 @@ app.put('/products/update', (req, res) => {
   })
 })
 
-app.delete('/products/delete', (req, res) => {
+app.delete('/products', (req, res) => {
   helpers.deleteShoeData(req.body, (err, shoe) => {
     console.log(err, shoe);
     if (err) {

@@ -24,6 +24,7 @@ const Header = (props) => {
       url: `/products/${modelId}/summary`
     })
     .then((response) => {
+      console.log(response);
       setShoeData(response.data);
       setModelName(response.data.name);
       setRender1(true);
@@ -36,25 +37,30 @@ const Header = (props) => {
 
   useEffect( () => {
 
-    axios({
-      method: 'get',
-      url: `/shoes/${modelId}/rating`
-    })
-    .then((response) => {
-      console.log(response);
-      setStars(response.data.rating_average);
-      setReviewCount(response.data.review_count);
-      setRender2(true);
-    })
-    .catch((err) => {
-      return err;
-    });
+    // axios({
+    //   method: 'get',
+    //   url: `/shoes/${modelId}/rating`
+    // })
+    // .then((response) => {
+    //   console.log(response);
+    //   setStars(response.data.rating_average);
+    //   setReviewCount(response.data.review_count);
+    //   setRender2(true);
+    // })
+    // .catch((err) => {
+    //   return err;
+    // });
+
+    setStars(4);
+    setReviewCount(12);
+    setRender2(true);
 
   }, [])
 
   let title = `${shoeData.gender} ${modelName}`
 
   const capitalizeWords = (header) => {
+    console.log('here');
     let words = header.split(' ')
     let capitalWords = words.map((word) => {
       return word.charAt(0).toUpperCase() + word.slice(1);
