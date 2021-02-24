@@ -72,17 +72,17 @@ const seed = async (count, cb) => {
 }
 
 
-const update = async function () {
-  console.time('insert');
-  for (let i = 1; i <= 100; i++) {
-    var record = recordCreator(i);
-    var features = JSON.stringify(recordCreator(i).coreFeatures).replace(/"/g,'\'').replace(/ /g,'');
-    console.log(record);
-    //  console.log(i, 'here');
-    await pool.query(`UPDATE shoes SET features = ARRAY${record} where id = ${i}`)
-  }
-  console.timeEnd('insert');
-}
+// const update = async function () {
+//   console.time('insert');
+//   for (let i = 1; i <= 100; i++) {
+//     var record = recordCreator(i);
+//     var features = JSON.stringify(recordCreator(i).coreFeatures).replace(/"/g,'\'').replace(/ /g,'');
+//     console.log(record);
+//     //  console.log(i, 'here');
+//     await pool.query(`UPDATE shoes SET features = ARRAY${record} where id = ${i}`)
+//   }
+//   console.timeEnd('insert');
+// }
 
 // update();
 seed(10000000, pool.query.bind(pool));

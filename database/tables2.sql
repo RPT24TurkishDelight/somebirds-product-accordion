@@ -1,3 +1,7 @@
+DROP DATABASE IF EXISTS shoespost2;
+CREATE DATABASE shoespost2;
+
+\c shoespost2;
 
 DROP TABLE IF EXISTS features;
 DROP TABLE IF EXISTS shoes;
@@ -7,14 +11,15 @@ CREATE TABLE shoes (
   gender VARCHAR(10),
   name varchar(100),
   price INT,
-  description varchar(1000)
+  description varchar(1000),
+  features text[]
 );
 
-CREATE TABLE features (
-  id serial NOT NULL PRIMARY KEY,
-  shoe_id INT references shoes(id),
-  description varchar(40)
-);
+-- CREATE TABLE features (
+--   id serial NOT NULL PRIMARY KEY,
+--   shoe_id INT references shoes(id),
+--   description varchar(40),
+-- );
 
 
 

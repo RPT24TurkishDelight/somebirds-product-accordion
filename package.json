@@ -8,7 +8,7 @@
     "test": "jest --forceExit",
     "mocha-test": "mocha spec/db-spec.js",
     "build": "webpack --watch",
-    "db:seed": "node database/seed.js"
+    "db:seed": "psql -f database/tables2.sql && node database/postgres2.js"
   },
   "repository": {
     "type": "git",
