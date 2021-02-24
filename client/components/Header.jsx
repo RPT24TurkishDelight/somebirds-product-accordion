@@ -24,7 +24,6 @@ const Header = (props) => {
       url: `/products/${modelId}/summary`
     })
     .then((response) => {
-      console.log(response);
       setShoeData(response.data);
       setModelName(response.data.name);
       setRender1(true);
@@ -60,7 +59,6 @@ const Header = (props) => {
   let title = `${shoeData.gender} ${modelName}`
 
   const capitalizeWords = (header) => {
-    console.log('here');
     let words = header.split(' ')
     let capitalWords = words.map((word) => {
       return word.charAt(0).toUpperCase() + word.slice(1);
