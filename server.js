@@ -1,3 +1,4 @@
+require('newrelic');
 const express = require('express');
 const bodyParser = require('body-parser');
 const helpers = require('./database/psql.js');
@@ -14,7 +15,6 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/public'));
 
 app.get('/products/:shoeId/summary', (req, res) => {
-
   helpers.getShoeData(req.params.shoeId, (err, doc) => {
     if (err) {
       res.sendStatus(404);
@@ -24,7 +24,7 @@ app.get('/products/:shoeId/summary', (req, res) => {
 });
 
 app.post('/products', (req, res) => {
-  console.log(req.query, req.body);
+  console.log('here', req.body);
   if (req.body === undefined || req.body === '' || Object.keys(req.body).length === 0) {
     res.send('Cannot create from empty').status(406);
   } else {
@@ -39,7 +39,6 @@ app.post('/products', (req, res) => {
 })
 
 app.put('/products', (req, res) => {
-  console.log(req.body);
   helpers.updateShoeData(req.query.id, req.body, (err, shoe) => {
     if (err) {
       res.send(err).status(406);
