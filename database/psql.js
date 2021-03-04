@@ -1,8 +1,12 @@
 const { get } = require('lodash');
 const { Client, Pool } = require('pg');
+const {user, password} = require('./dblogin.js');
 
 const pool = new Pool({
-  database: 'shoespost2'
+  host: '54.151.44.150',
+  database: 'shoespost2',
+  user: user,
+  password: password
 })
 
 pool.connect();
