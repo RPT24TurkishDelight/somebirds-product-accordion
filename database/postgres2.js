@@ -1,12 +1,19 @@
 const { Client, Pool } = require('pg')
 const {recordInserter, recordCreator} = require('./sdcSeed');
-
+const {user, pass} = require('./dblogin.js');
 //Traditional SQL database with insertions
 const pool = new Pool({
-  database: 'shoespost2'
+  host: '3.101.39.213',
+  database: 'shoespost2',
+  user: user,
+  pass: pass
+}, (err, err2) => {
+  console.log(err, err2)
 })
 
-pool.connect()
+pool.connect().catch((err) => {
+  console.log(err);
+})
 
 // const seed = async (count, cb) => {
 //   console.time('insert');

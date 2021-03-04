@@ -5,3 +5,4 @@ notes.txt
 *.sh
 .env
 newrelic.js
+dblogin.js

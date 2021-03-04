@@ -24,18 +24,13 @@ app.get('/products/:shoeId/summary', (req, res) => {
 });
 
 app.post('/products', (req, res) => {
-  console.log('here', req.body);
-  if (req.body === undefined || req.body === '' || Object.keys(req.body).length === 0) {
-    res.send('Cannot create from empty').status(406);
-  } else {
-    helpers.createShoeData( req.body, (err, data) => {
-      if (err) {
-        res.send(err).status(406);
-      } else {
-        res.send(data).status(200);
-      }
-    })
-  }
+  helpers.createShoeData( req.body, (err, data) => {
+    if (err) {
+      res.send(err).status(406);
+    } else {
+      res.send('Success').status(200);
+    }
+  })
 })
 
 app.put('/products', (req, res) => {

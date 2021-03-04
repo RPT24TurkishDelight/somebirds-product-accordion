@@ -9,7 +9,7 @@ pool.connect();
 
 const CRUD = {
   getShoeData: (id, cb) => {
-     pool.query(`select * from shoes s where s.id = ${id};`, (err, result) => {
+     pool.query(`select * from shoes s where s.id = ${id} limit 1;`, (err, result) => {
       if (err) {
         cb(err)
       } else {
@@ -28,12 +28,11 @@ const CRUD = {
     })
   },
   createShoeData: (data, cb) => {
-    var features = data.features.replace(/"/g,'\'').replace(/ /g,'');
-    pool.query(`insert into shoes (gender, name, price, description, features) VALUES ('${data.gender}', '${data.name}', ${data.price}, '${data.description}', ARRAY${features})`, (err, results) => {
+    pool.query(`insert into shoes (gender, name, price, description, features) VALUES ('${data.gender}', '${data.name}', ${data.price}, '${data.description}', ARRAY${data.features})`, (err, results) => {
       if (err) {
         cb(err);
       } else {
-        cb(null, results);
+        cb(null, true);
       }
     });
   },
