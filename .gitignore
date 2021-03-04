@@ -4,3 +4,5 @@ notes.txt
 *.pem
 *.sh
 .env
+newrelic.js
+dblogin.js
