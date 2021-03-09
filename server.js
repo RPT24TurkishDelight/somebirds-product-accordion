@@ -24,6 +24,7 @@ app.get('/products/:shoeId/summary', (req, res) => {
 });
 
 app.post('/products', (req, res) => {
+  console.log(req.body);
   helpers.createShoeData( req.body, (err, data) => {
     if (err) {
       res.send(err).status(406);
